@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffe6f2;
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            width: 320px;
+            margin: 80px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff4da6;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ff99cc;
+        }
+
+        button {
+            background: #ff4da6;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff1a8c;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+        }
+
+        .success {
+            color: green;
+            font-size: 13px;
+        }
+    </style>
+
+    <script>
+
+        function validateName() {
+            var name = document.getElementById("name").value;
+            var msg = document.getElementById("nameMsg");
+
+            if (name.trim() === "") {
+                msg.innerHTML = "Name cannot be empty";
+                msg.className = "error";
+            }
+            else {
+                msg.innerHTML = "✓ Valid name";
+                msg.className = "success";
+            }
+        }
+
+        function validateAge() {
+            var age = document.getElementById("age").value;
+            var msg = document.getElementById("ageMsg");
+
+                if (isNaN(age)) {
+                    alert("Age must contain numbers only!");
+                    msg.innerHTML = "Age must be a number";
+                    msg.className = "error";
+                }
+                else if (age < 18) {
+                    alert("You must be 18 or older!");
+                    msg.innerHTML = "Age must be 18 or above";
+                    msg.className = "error";
+                }
+                else {
+                    msg.innerHTML = "✓ Age valid";
+                    msg.className = "success";
+                }
+            }
+        
+            function validatePhone() {
+                    var num = document.getElementById('num').value;
+                    var msg = document.getElementById('numMsg');
+
+                    if (isNaN(num)) {
+                        alert("Contact must contain numbers only!");
+                        msg.innerHTML = "Contact must be numbers only";
+                        msg.className = "error";
+                    }
+                    else {
+                        msg.innerHTML = "✓ Number valid";
+                        msg.className = "success";
+                    }
+                }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+        <h2>Registration Form</h2>
+
+        <label>Name</label><br>
+        <input type="text" id="name" onkeyup="validateName()">
+        <p id="nameMsg"></p>
+
+        <label>Age</label><br>
+        <input type="number" id="age" onkeyup="validateAge()">
+        <p id="ageMsg"></p>
+
+        <label>Email</label><br>
+        <input type="email"><br>
+
+        <label>Password</label><br>
+        <input type="password"><br>
+
+        <label>Phone</label><br>
+        <input type="tel"><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+
+</html>

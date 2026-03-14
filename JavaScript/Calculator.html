@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #9d83b7;
+            color: #43205e;
+            margin: 10px;
+        }
+
+        .navbar {
+            background: #6f4a8e;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            background: #b583e8;
+            border-radius: 15px;
+            padding: 8px 14px;
+            color: #fbfbfb;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: #b583e8;
+            color: #d9bdfb;
+            padding: 8px 14px;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #d4c1ef;
+            min-width: 150px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            color: #481d68;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background: #c5a1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Theme buttons */
+        .theme-btn {
+            margin-left: 5px;
+            padding: 6px 12px;
+            border-radius: 12px;
+            border: 5px;
+            font-weight: bold;
+        }
+
+        /* CENTER AREA */
+        .page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* CALCULATOR */
+        .calculator {
+            background: #87b2cf;
+            padding: 30px;
+            border-radius: 20px;
+            width: 320px;
+            height: 430px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 12px;
+            border: 3px solid #360646;
+            font-size: 14px;
+        }
+
+        button {
+            margin: 6px;
+            padding: 10px 16px;
+            border-radius: 20px;
+            border: none;
+            background: linear-gradient(to right, #bf96e8, #8dbad1);
+            color: #260b39;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #856191;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* CLASSIC THEME */
+        body.classic {
+            background: #947cac;
+            color: #3a1b53;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body.classic .calculator {
+            background: #5da6d7;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        body.classic button {
+            background: linear-gradient(to right, #c494f4, #a5daf4);
+            color: #190228;
+        }
+
+        /* SKY THEME */
+        body.sky {
+            background: #8bafdc;
+            color: #0e3152;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body.sky .calculator {
+            background: #98cbee;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        body.sky button {
+            background: linear-gradient(to right, #77d1ef, #8794fa);
+            color: #001f3f;
+        }
+
+        /*  iOS THEME */
+        body.ios {
+            background: #ecd4e1;
+            color: #161617;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        body.ios .calculator {
+            background: rgb(99, 115, 255);
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        body.ios button {
+            background: #00438b;
+            color: white;
+        }
+
+        /*  DARK THEME */
+        body.dark {
+            background: #652b6d;
+            color: #dfd1f3;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body.dark .calculator {
+            background: #412541;
+        }
+
+        body.dark button {
+            background: linear-gradient(to right, #db83b6, #a545e4);
+            color: white;
+        }
+
+        body.dark button:hover {
+            background: #763159;
+        }
+
+        /* HELP CONTAINER */
+        .help-container {
+            display: flex;
+            justify-content: center;
+            padding: 60px 20px;
+            background: #605071;
+        }
+
+        /* HELP CARD */
+        .help-card {
+            background: #bba4d0;
+            padding: 30px;
+            border-radius: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(37, 18, 54, 0.15);
+        }
+
+        .help-card h2 {
+            margin-bottom: 20px;
+            color: #462b5a;
+        }
+
+        .help-item {
+            background: #e2ccff;
+            padding: 10px;
+            border-radius: 12px;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+
+        .help-note {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #79458f;
+        }
+
+        /* DARK MODE HELP */
+        body.dark .help-container {
+            background: #452e4e;
+        }
+
+        body.dark .help-card {
+            background: #9551ae;
+            color: #b482d1;
+        }
+
+        body.dark .help-item {
+            background: #61357a;
+        }
+
+        body.dark .help-note {
+            color: #d997d9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="classic">
+    <div class="navbar">
+        <strong>🧮 Calculator 🧮</strong>
+        <div class="nav-links">
+            <a href="#Calculator">Calculator</a>
+            <div class="dropdown">
+                <button class="dropbtn">Menu ▼</button>
+                <div class="dropdown-content">
+                    <a href="#Calculator">Calculator</a>
+                    <a href="#help">Help</a>
+                </div>
+            </div>
+
+            <!-- THEME BUTTONS -->
+            <span>
+                <button onclick="document.body.className='classic';" class="theme-btn">Classic</button>
+                <button onclick="document.body.className='sky';" class="theme-btn">Sky</button>
+                <button onclick="document.body.className='ios';" class="theme-btn">iOS</button>
+                <button onclick="document.body.className='dark';" class="theme-btn">Dark</button>
+            </span>
+        </div>
+    </div><br><br><br>
+
+    <div class="page" id="Calculator">
+        <div class="calculator">
+            <h2 class="display-6">Calculator 🔢<h2>
+                    <input type="number" id="num1" placeholder="Enter first number">
+                    <input type="number" id="num2" placeholder="Enter second number">
+                    <br>
+                    <button onclick="add()">+</button>
+                    <button onclick="subtract()">−</button>
+                    <button onclick="multiply()">×</button>
+                    <button onclick="divide()">÷</button>
+                    <br><br>
+                    <button onclick="toggleMode()">🌙 / ☀️</button>
+                    <p id="result">Result will appear here</p>
+        </div>
+    </div>
+<br><br><br>
+    <div id="help" class="help-container">
+        <div class="help-card">
+            <h2>💡 Calculator Help</h2>
+            <div class="help-item">➕ Add – Adds two numbers</div>
+            <div class="help-item">➖ Subtract – Subtracts second number</div>
+            <div class="help-item">✖️ Multiply – Multiplies numbers</div>
+            <div class="help-item">➗ Divide – Divides first by second</div>
+            <p class="help-note">⚠ Cannot divide by zero</p>
+        </div>
+    </div>
+
+    <script>
+        function getValues() {
+            var x = Number(document.getElementById("num1").value);
+            var y = Number(document.getElementById("num2").value);
+            return [x, y];
+        }
+
+        function add() {
+            var [x, y] = getValues();
+            showResult(x + " + " + y + " = " + (x + y), "#9d4edd");
+        }
+
+        function subtract() {
+            var [x, y] = getValues();
+            showResult(x + " - " + y + " = " + (x - y), "#ff6b6b");
+        }
+
+        function multiply() {
+            var [x, y] = getValues();
+            showResult(x + " × " + y + " = " + (x * y), "#28857c");
+        }
+
+        function divide() {
+            var [x, y] = getValues();
+            if (y === 0) {
+                showResult("Cannot divide by zero", "#ff0000");
+            } else {
+                showResult(x + " ÷ " + y + " = " + (x / y), "#ffa62b");
+            }
+        }
+
+        function showResult(text, color) {
+            var resultBox = document.getElementById("result");
+            resultBox.innerHTML = text;
+            resultBox.style.color = color;
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+</body>
+</html>

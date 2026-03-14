@@ -1,0 +1,15 @@
+/* global css */
+/*id selector*/
+#myid{
+    color:rgb(228, 156, 208)
+}
+#myid2 {
+    color: rgb(188, 179, 234)
+}
+#myid3{
+    color: rgb(119, 228, 210)
+}
+p {
+    font-size: 20px;
+    font-weight: bold;
+}

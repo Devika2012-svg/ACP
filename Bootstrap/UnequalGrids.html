@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unequal Grid</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e1b4b, #312e81);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 30px 0;
+            color: #c7d2fe;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .bg-info {
+            background: linear-gradient(to bottom left, #3662a9, #4d50f4);
+        }
+
+        .bg-dark {
+            background: linear-gradient(to bottom left, #9f77db, #5e0de0);
+        }
+
+        .bg-primary {
+            background: linear-gradient(to bottom left, #1850c9, #774ac5);
+        }
+         .sticky {
+            position: sticky;
+            top: 20px;
+            width: 120px;
+            height: 100px;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgba(72, 96, 174, 0.6);
+            border: 2px solid white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .fixed {
+            position: fixed;
+            right: 22px;
+            top: 100px;
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>The Important Role of Science</h3>
+        <div class="row">
+            <div class="sticky">
+                <h4>🦠
+                    🔍🧪🔬</h4>
+            </div>
+            <img src="https://i.pinimg.com/170x/a1/e6/6b/a1e66b31b908022466297c0a98281249.jpg"
+                alt="Science" style="width: 100px; height: 150px;" class="fixed">
+            <div class="col-3 bg-info p-4 mx-3">
+                Science plays an important role in helping people understand the world around them. Through observation,
+                experiments, and research, scientists discover how natural processes work, from the smallest cells to the largest
+                planets.
+            </div>
+
+            <div class="col-5 bg-dark p-4 mx-3">
+                One major benefit of science is its impact on technology and medicine. Scientific discoveries have led
+                to inventions like computers, smartphones, and vaccines.<br>
+            </div>
+
+            <div class="col-4 bg-primary p-4 mx-3">
+                Science is also important for the future of the planet. By studying climate, ecosystems, and energy
+                sources, scientists help societies find solutions to environmental problems.
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

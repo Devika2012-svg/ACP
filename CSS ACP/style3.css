@@ -1,0 +1,30 @@
+/* Universal selector */
+* {
+    font-size: 20px;
+}
+
+/* External CSS example */
+h3 {
+    color: rgb(83, 25, 112);
+}
+
+/* Element selector example */
+h4 {
+    color: rgb(54, 179, 179);
+}
+
+/* Class selector example */
+.animal-info {
+    color: rgb(121, 72, 13);
+}
+
+/* ID selector example */
+#rare-animal {
+    color: rgb(206, 38, 206);
+}
+
+/* Group selector example */
+h5,
+p {
+    color: rgba(57, 12, 180, 0.694);
+}
