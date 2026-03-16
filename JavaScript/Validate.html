@@ -76,37 +76,18 @@
             var age = document.getElementById("age").value;
             var msg = document.getElementById("ageMsg");
 
-                if (isNaN(age)) {
-                    alert("Age must contain numbers only!");
-                    msg.innerHTML = "Age must be a number";
-                    msg.className = "error";
+                if (age < 18) {
+                alert("You must be 18 or older!");
+                msg.innerHTML = "Age must be 18 or above";
+                msg.className = "error";
                 }
-                else if (age < 18) {
-                    alert("You must be 18 or older!");
-                    msg.innerHTML = "Age must be 18 or above";
-                    msg.className = "error";
-                }
+
                 else {
                     msg.innerHTML = "✓ Age valid";
                     msg.className = "success";
                 }
             }
         
-            function validatePhone() {
-                    var num = document.getElementById('num').value;
-                    var msg = document.getElementById('numMsg');
-
-                    if (isNaN(num)) {
-                        alert("Contact must contain numbers only!");
-                        msg.innerHTML = "Contact must be numbers only";
-                        msg.className = "error";
-                    }
-                    else {
-                        msg.innerHTML = "✓ Number valid";
-                        msg.className = "success";
-                    }
-                }
-
     </script>
 
 </head>
