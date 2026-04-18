@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Luminous | Fine Dining</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand-red: #d10000;
+            --pure-white: #ffffff;
+            --soft-white: #f8f8f8;
+            --deep-red: #8b0000;
+            --text-gray: #444444;
+        }
+
+        body {
+            background: var(--pure-white);
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 60px 0;
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 1100px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 30px;
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--brand-red);
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--deep-red);
+            margin-bottom: 10px;
+        }
+
+        p.intro-text {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background: var(--brand-red);
+            margin: 20px auto;
+        }
+
+        .Pic {
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+            border: 5px solid var(--brand-red);
+            box-shadow: 0 20px 50px rgba(209, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+        }
+
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .info-card h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--brand-red);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        section.carousel-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 400px;
+            background: var(--soft-white);
+            margin: 40px 0;
+        }
+
+        .mySlides {
+            height: 320px;
+            width: 450px;
+            max-width: 85%;
+            object-fit: cover;
+            border: 2px solid var(--brand-red);
+            display: none;
+            animation: fadeIn 0.8s;
+        }
+
+
+
+        button {
+            background: var(--brand-red);
+            color: var(--pure-white);
+            border: 2px solid var(--brand-red);
+            padding: 15px 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-bottom: 60px;
+        }
+
+        button:hover {
+            background: transparent;
+            color: var(--brand-red);
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Luminous Kitchen</h3>
+        <h2>Journey of Different Cuisines</h2>
+        <div class="divider"></div>
+        <p class="intro-text">We bring the world to your plate. From the spicy streets of Asia to the classic kitchens
+            of Europe, enjoy a fresh and tasty journey with us.</p>
+
+        <img class="Pic"
+            src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Artisan Italian Spread">
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h4>Fresh Food</h4>
+                <p>We use only the best ingredients from local farms every single day.</p>
+            </div>
+            <div class="info-card">
+                <h4>Global Chefs</h4>
+                <p>Our cooks come from all over the world to share their secret recipes.</p>
+            </div>
+            <div class="info-card">
+                <h4>Fine Dining</h4>
+                <p>Enjoy your meal in a beautiful and relaxing space made just for you.</p>
+            </div>
+        </div>
+
+        <h2>Chef's Favorites</h2>
+        <p>Take a look at our most popular dishes this month.</p>
+    </div>
+
+    <section class="carousel-box">
+        <img class="mySlides"
+            src="https://images.pexels.com/photos/1148086/pexels-photo-1148086.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Fresh Sushi Platter">
+        <img class="mySlides"
+            src="https://twoplaidaprons.com/wp-content/uploads/2020/05/Chinese-pork-dumplings-picking-up-a-dumpling-with-chopsticks-500x500.jpg"
+            alt="Dumplings">
+        <img class="mySlides"
+            src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Homemade Pasta">
+        <img class="mySlides"
+            src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/cc6bd919-c288-4a7c-9e90-09e70eab54aa/Derivates/d95f9d85-0bed-4533-b037-fd2f95c1295a.jpg"
+            alt="Colorful Macarons">
+        <img class="mySlides" src="https://cravinghomecooked.com/wp-content/uploads/2019/02/easy-waffle-recipe-1-16.jpg"
+            alt="Waffles">
+    </section>
+
+    <div class="container">
+        <button>Explore Full Menu</button>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Slider - Global Flavors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fcfaf8;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+        }
+
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        #Home {
+            line-height: 2;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-dark {
+            background-color: #282e34;
+            color: #ddd;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .simple-card {
+            padding: 30px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            border-top: 5px solid transparent;
+        }
+
+        .simple-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-indian {
+            border-top-color: #ff9933;
+            box-shadow: 0 10px 30px rgba(255, 153, 51, 0.1);
+        }
+
+        .card-indian h5 {
+            color: #ff9933 !important;
+        }
+
+        .card-italian {
+            border-top-color: #008c45;
+            box-shadow: 0 10px 30px rgba(0, 140, 69, 0.1);
+        }
+
+        .card-italian h5 {
+            color: #11ac5f !important;
+        }
+
+        .card-thai {
+            border-top-color: #ee1c25;
+            box-shadow: 0 10px 30px rgba(238, 28, 37, 0.1);
+        }
+
+        .card-thai h5 {
+            color: #ee1c25 !important;
+        }
+
+        .card-japan {
+            border-top-color: #0f4d5d;
+            box-shadow: 0 10px 30px rgba(238, 28, 37, 0.1);
+        }
+
+        .card-japan h5 {
+            color: #399fb9 !important;
+        }
+
+        .card-mex {
+            border-top-color: #5e0784;
+            box-shadow: 0 10px 30px rgba(243, 70, 79, 0.1);
+        }
+
+         .card-mex h5 {
+            color: #b06bfe !important;
+        }
+
+         .card-chi {
+            border-top-color: #f5ef35;
+            box-shadow: 0 10px 30px rgba(243, 70, 79, 0.1);
+        }
+
+         .card-chi h5 {
+            color: #fcd857 !important;
+        }
+
+        .section-dark p {
+            color: #bbb !important;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Different Cuisines</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#Home">Home</a>
+                <a class="nav-link" href="#About">About</a>
+                <a class="nav-link" href="#Gallery">Cuisine</a>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container-fluid p-0">
+        <section id="Home" class="text-center container">
+            <h1>Global Flavors</h1>
+            <div class="col-md-6 mx-auto mt-4">
+                <ul class="list-unstyled">
+                    <li><b>Italian:</b> Pizza & Pasta</li>
+                    <li><b>Indian:</b> Spices & Curry</li>
+                    <li><b>Thai:</b> Sweet & Spicy</li>
+                    <li><b>Japanese:</b> Sushi & Ramen</li>
+                    <li><b>Mexican:</b>Tacos & Salsa</li>
+                    <li><b>Chinese:</b>Noodles & Dumplings</li>
+                </ul>
+            </div>
+        </section><br><br>
+
+        <section id="About" class="section-dark">
+            <div class="container">
+                <h2 class="mb-5">Our Cuisines</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="simple-card card-indian">
+                            <h5 class="fw-bold">Indian Food</h5>
+                            <p class="small">Diverse regional styles using rich spices and varied vegetarian
+                                options like biryani and naan.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="simple-card card-italian">
+                            <h5 class="fw-bold">Italian Food</h5>
+                            <p class="small">Ingredient-driven tradition featuring iconic pasta, Neapolitan
+                                pizza, and fresh cheeses.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="simple-card card-thai">
+                            <h5 class="fw-bold">Thai Food</h5>
+                            <p class="small">A harmonious mix of five flavors found in world-famous dishes like
+                                Pad Thai and curries.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="simple-card card-japan">
+                            <h5 class="fw-bold">Japanese Food</h5>
+                            <p class="small">Japanese food is known for its emphasis on fresh ingredients, balanced
+                                flavors, and iconic dishes like sushi, ramen, and
+                                tempura.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="simple-card card-mex">
+                            <h5 class="fw-bold">Mexican Food</h5>
+                            <p class="small">A lively mix of spices, fresh ingredients, and bold street food favorites.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="simple-card card-chi">
+                            <h5 class="fw-bold">Chinese Food</h5>
+                            <p class="small">A flavorful balance of textures and tastes, from wok-fried classics to delicate dim sum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><br><br>
+
+        <section id="Gallery" class="container">
+            <h2 class="text-center mb-4">Delicious Food</h2>
+
+            <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner shadow rounded-4">
+                    <div class="carousel-item active">
+                        <img src="https://www.ficsi.in/blog/wp-content/uploads/2025/05/Blog-2.jpg"
+                            class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://lavillapizza.com/wp-content/uploads/2026/01/iStock-2231412703-1024x641.jpg"
+                            class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/30/34/65/5a/siam-palace-thai-restaurant.jpg"
+                            class="d-block w-100">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
